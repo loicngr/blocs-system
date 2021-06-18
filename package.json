@@ -2,7 +2,7 @@
   "name": "z-overlay",
   "version": "0.0.1",
   "description": "Z Overlay",
-  "productName": "z-overlay",
+  "productName": "Z Overlay",
   "author": "loicnogier@ik.me",
   "private": true,
   "scripts": {
@@ -15,11 +15,13 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
+    "@shopify/draggable": "^1.0.0-beta.8",
     "core-js": "^3.6.5",
     "quasar": "^1.0.0"
   },
   "devDependencies": {
     "@quasar/app": "^2.0.0",
+    "@quasar/cli": "^1.2.1",
     "babel-eslint": "^10.0.1",
     "eslint": "^7.21.0",
     "eslint-config-standard": "^16.0.2",
@@ -27,7 +29,8 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-vue": "^7.7.0",
-    "eslint-webpack-plugin": "^2.4.0"
+    "eslint-webpack-plugin": "^2.4.0",
+    "vue": "^2.6.14"
   },
   "browserslist": [
     "last 10 Chrome versions",
