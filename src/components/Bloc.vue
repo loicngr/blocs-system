@@ -7,7 +7,7 @@
 
 <script>
 import ZyBloc from 'components/Core/ZyBloc'
-import propsBLoc from 'src/mixins/propsBLoc'
+import propsBLoc from '@/mixins/propsBLoc'
 
 export default {
   name: 'Bloc',
