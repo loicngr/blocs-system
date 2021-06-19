@@ -4,7 +4,11 @@
   height: 1080px;
   min-height: 1080px !important;
 
-  background-color: silver;
-  overflow: hidden;
-  z-index: -1;
+  background-color: #e2e2e2;
+  overflow: auto;
+  z-index: 0;
+}
+
+.bloc {
+  z-index: 1;
 }

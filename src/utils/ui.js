@@ -2,18 +2,7 @@ import Vue from 'vue'
 import { Dialog, Loading, Notify } from 'quasar'
 
 const STORAGE_KEY = 'ZY-UI'
-const UI_DEFAULT_STATE = {
-  blocs: [
-    {
-      id: 1,
-      width: 600,
-      height: 600,
-      y: 50,
-      x: 50,
-      bgColor: 'teal'
-    }
-  ]
-}
+const UI_DEFAULT_STATE = {}
 
 /**
  * Instance de gestion de l'état de l'ui
