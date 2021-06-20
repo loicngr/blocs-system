@@ -2,6 +2,7 @@
 // https://quasar.dev/quasar-cli/quasar-conf-js
 /* eslint-env node */
 const path = require('path')
+const ESLintPlugin = require('eslint-webpack-plugin')
 
 module.exports = function (/* ctx */) {
   return {
@@ -69,6 +70,11 @@ module.exports = function (/* ctx */) {
           ...cfg.resolve.alias,
           '@': path.resolve(__dirname, './src/')
         }
+      },
+
+      chainWebpack (chain) {
+        chain.plugin('eslint-webpack-plugin')
+          .use(ESLintPlugin, [{ extensions: ['js', 'vue'] }])
       }
     },
 
