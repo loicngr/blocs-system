@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+import source from './source'
+import scene from './scene'
 import bloc from './bloc'
+import global from './global'
 import localStoragePlugin from '@/store/plugins/localStoragePlugin'
 
 Vue.use(Vuex)
@@ -18,7 +21,10 @@ Vue.use(Vuex)
 export default function (/* { ssrContext } */) {
   const Store = new Vuex.Store({
     modules: {
-      bloc
+      source,
+      scene,
+      bloc,
+      global
     },
     plugins: [localStoragePlugin],
 
@@ -28,9 +34,12 @@ export default function (/* { ssrContext } */) {
   })
 
   if (process.env.DEV && module.hot) {
-    module.hot.accept(['./bloc'], () => {
+    module.hot.accept(['./source', './scene', './bloc', './global'], () => {
+      const newSource = require('./source').default
+      const newScene = require('./scene').default
       const newBloc = require('./bloc').default
-      Store.hotUpdate({ modules: { bloc: newBloc } })
+      const newGlobal = require('./global').default
+      Store.hotUpdate({ modules: { source: newSource, scene: newScene, bloc: newBloc, global: newGlobal } })
     })
   }
 

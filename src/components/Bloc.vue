@@ -15,11 +15,11 @@
 
 <script>
 import ZyBloc from '@/components/Core/ZyBloc'
-import propsBLoc from '@/mixins/propsBLoc'
+import propsBloc from '@/mixins/propsBloc'
 
 export default {
   name: 'Bloc',
-  mixins: [propsBLoc],
+  mixins: [propsBloc],
   components: {
     ZyBloc
   }

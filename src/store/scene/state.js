@@ -1,11 +1,11 @@
 import { getDefaultState } from '@/store/plugins/localStoragePlugin'
-import { DEFAULT_BLOCS } from '@/consts/app'
+import { DEFAULT_SCENES } from '@/consts/app'
 
 export default function () {
   return getDefaultState(
-    'bloc',
+    'scene',
     {
-      blocs: DEFAULT_BLOCS
+      scenes: DEFAULT_SCENES
     }
   )
 }

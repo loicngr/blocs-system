@@ -46,10 +46,10 @@
 </template>
 
 <script>
-import propsBLoc from '@/mixins/propsBLoc'
+import propsBloc from '@/mixins/propsBloc'
 
 export default {
   name: 'ZyBloc',
-  mixins: [propsBLoc]
+  mixins: [propsBloc]
 }
 </script>

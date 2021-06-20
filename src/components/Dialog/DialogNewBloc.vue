@@ -67,7 +67,7 @@
 
 <script>
 import dialog from '@/mixins/dialog'
-import propsBLoc from '@/mixins/propsBLoc'
+import propsBloc from '@/mixins/propsBloc'
 import { LAYOUT_RULES, SCREENS_SIZE } from '@/consts/app'
 
 export default {
@@ -75,7 +75,7 @@ export default {
   SCREENS_SIZE,
   LAYOUT_RULES,
   mixins: [
-    propsBLoc,
+    propsBloc,
     dialog
   ],
   created () {
