@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import ZyBloc from 'components/Core/ZyBloc'
+import ZyBloc from '@/components/Core/ZyBloc'
 import propsBLoc from '@/mixins/propsBLoc'
 
 export default {

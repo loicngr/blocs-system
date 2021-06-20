@@ -27,9 +27,9 @@
 </template>
 
 <script>
-import bloc from 'components/bloc'
+import bloc from '@/components/bloc'
 import { createNamespacedHelpers } from 'vuex'
-import DialogNewBloc from 'components/Dialog/DialogNewBloc'
+import DialogNewBloc from '@/components/Dialog/DialogNewBloc'
 import { UPDATE_BLOCS } from '@/consts/app'
 
 const { mapGetters, mapActions } = createNamespacedHelpers(
