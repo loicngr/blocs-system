@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 import bloc from './bloc'
+import localStoragePlugin from '@/store/plugins/localStoragePlugin'
 
 Vue.use(Vuex)
 
@@ -19,6 +20,7 @@ export default function (/* { ssrContext } */) {
     modules: {
       bloc
     },
+    plugins: [localStoragePlugin],
 
     // enable strict mode (adds overhead!)
     // for dev mode and --debug builds only

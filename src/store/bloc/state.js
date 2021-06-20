@@ -1,7 +1,11 @@
 import { LAYOUT } from '@/consts/app'
+import { getDefaultState } from '@/store/plugins/localStoragePlugin'
 
 export default function () {
-  return {
-    blocs: LAYOUT.blocs
-  }
+  return getDefaultState(
+    'bloc',
+    {
+      blocs: LAYOUT.blocs
+    }
+  )
 }

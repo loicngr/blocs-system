@@ -1,28 +1,14 @@
 import Vue from 'vue'
 import { Dialog, Loading, Notify } from 'quasar'
 
-const STORAGE_KEY = 'ZY-UI'
-const UI_DEFAULT_STATE = {}
-
 /**
  * Instance de gestion de l'état de l'ui
  * @global
  */
 export const $ui = new Vue({
-  data () {
-    return _.merge({}, UI_DEFAULT_STATE, JSON.parse(window.localStorage.getItem(STORAGE_KEY)))
-  },
   created () {
     if (this.isDev) {
       window.showLogs = true
-    }
-  },
-  watch: {
-    $data: {
-      deep: true,
-      handler ({ modals, unreadEvents, logs, serviceEvents, ...ui }) {
-        window.localStorage.setItem(STORAGE_KEY, JSON.stringify(ui))
-      }
     }
   },
   computed: {

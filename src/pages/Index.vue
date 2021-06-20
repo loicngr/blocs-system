@@ -30,6 +30,7 @@
 import bloc from 'components/bloc'
 import { createNamespacedHelpers } from 'vuex'
 import DialogNewBloc from 'components/Dialog/DialogNewBloc'
+import { UPDATE_BLOCS } from '@/consts/app'
 
 const { mapGetters, mapActions } = createNamespacedHelpers(
   'bloc'
@@ -42,6 +43,9 @@ export default {
   computed: {
     ...mapGetters(['blocs', 'lastBlocsId'])
   },
+  created () {
+    this.$ui.$on(UPDATE_BLOCS, this.updateBlocs)
+  },
   methods: {
     ...mapActions(['updateBlocsAction', 'deleteBlocAction']),
     async addBloc () {
@@ -51,19 +55,27 @@ export default {
       })
 
       modal.onOk((v) => {
-        this.updateBlocsAction([...this.blocs, {
-          id: this.lastBlocsId + 1,
-          label: v.label,
-          height: v.height,
-          width: v.width,
-          yPosition: v.yPosition,
-          xPosition: v.xPosition
-        }])
+        v.id = this.lastBlocsId + 1
+        this.updateBlocs(v)
       })
     },
     deleteBloc (id) {
       this.deleteBlocAction(id)
+    },
+    updateBlocs (newBloc = {}) {
+      this.updateBlocsAction(this.editBloc(newBloc))
+    },
+    editBloc (b = {}) {
+      const _blocs = _.cloneDeep(this.blocs)
+      const blocIndex = _blocs.findIndex((el) => el.id === b.id)
+      if (blocIndex === -1) return [..._blocs, b]
+
+      _blocs[blocIndex] = b
+      return _blocs
     }
+  },
+  beforeDestroy () {
+    this.$ui.$off(UPDATE_BLOCS, this.updateBlocs)
   }
 }
 </script>

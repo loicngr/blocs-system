@@ -43,3 +43,5 @@ export const LAYOUT_RULES = {
 
 export const ERROR_POS_TITLE = 'Alerte de positionnement'
 export const ERROR_POS_MESSAGE = 'Le bloc est sortie du cadre prédéfini.'
+
+export const UPDATE_BLOCS = 'ZY:UPDATE_BLOCS'

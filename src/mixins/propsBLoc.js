@@ -1,4 +1,4 @@
-import { ERROR_POS_MESSAGE, ERROR_POS_TITLE, LAYOUT_RULES, SCREENS_SIZE } from '@/consts/app'
+import { ERROR_POS_MESSAGE, ERROR_POS_TITLE, LAYOUT_RULES, SCREENS_SIZE, UPDATE_BLOCS } from '@/consts/app'
 import { toast } from '@/utils/ui'
 
 export default {
@@ -93,7 +93,7 @@ export default {
         /** X POSITION */
         this.checkPosition(v.xPosition, (SCREENS_SIZE.width - v.height), 'xPosition')
 
-        this.$emit('updateBloc', this.getParsedValues)
+        this.$ui.$emit(UPDATE_BLOCS, this.getParsedValues)
       }, 1000)
     }
   },
