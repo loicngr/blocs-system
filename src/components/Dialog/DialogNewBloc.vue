@@ -77,6 +77,9 @@ export default {
   mixins: [
     propsBLoc,
     dialog
-  ]
+  ],
+  created () {
+    this.setAutoUpdate(false)
+  }
 }
 </script>

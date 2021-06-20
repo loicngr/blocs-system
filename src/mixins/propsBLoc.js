@@ -34,6 +34,7 @@ export default {
   },
   data () {
     return {
+      autoUpdate: true,
       value: {
         label: this.label,
         height: this.height,
@@ -93,7 +94,7 @@ export default {
         /** X POSITION */
         this.checkPosition(v.xPosition, (SCREENS_SIZE.width - v.height), 'xPosition')
 
-        this.$ui.$emit(UPDATE_BLOCS, this.getParsedValues)
+        if (this.autoUpdate) this.$ui.$emit(UPDATE_BLOCS, this.getParsedValues)
       }, 1000)
     }
   },
@@ -115,6 +116,9 @@ export default {
         message: ERROR_POS_TITLE,
         caption: ERROR_POS_MESSAGE
       })
+    },
+    setAutoUpdate (status = true) {
+      this.autoUpdate = status
     }
   }
 }
