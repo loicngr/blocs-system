@@ -1,19 +1,19 @@
 <template>
   <q-page class="scroll">
-    <h1 class="full-width text-center">Sources</h1>
+    <h1 class="full-width text-center">Scènes</h1>
     <div class="flex flex-center">
-      <sources />
+      <Scenes />
     </div>
   </q-page>
 </template>
 
 <script>
-import Sources from 'components/Sources'
+import Scenes from 'components/Scenes'
 
 export default {
-  name: 'PageIndex',
+  name: 'PageScenes',
   components: {
-    sources: Sources
+    Scenes
   }
 }
 </script>

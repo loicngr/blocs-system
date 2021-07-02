@@ -7,30 +7,38 @@
   "private": true,
   "scripts": {
     "dev": "quasar dev",
+    "dev:android": "quasar dev -m cordova -T android",
+    "dev:ios": "quasar dev -m cordova -T ios",
     "build": "quasar build",
     "build:pwa": "quasar build -m pwa",
     "build:ios": "quasar build -m cordova -T ios",
+    "build:android": "quasar build -m cordova -T android",
     "lint": "eslint --ext .js,.vue ./",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@quasar/extras": "^1.0.0",
-    "@shopify/draggable": "^1.0.0-beta.8",
+    "@quasar/extras": "^1.10.7",
     "core-js": "^3.6.5",
-    "quasar": "^1.0.0"
+    "lodash": "^4.17.21",
+    "quasar": "^1.15.21"
   },
   "devDependencies": {
-    "@quasar/app": "^2.0.0",
-    "@quasar/cli": "^1.2.1",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^7.21.0",
-    "eslint-config-standard": "^16.0.2",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-vue": "^7.7.0",
-    "eslint-webpack-plugin": "^2.4.0",
-    "vue": "^2.6.14"
+    "@quasar/app": "^2.2.10",
+    "babel-eslint": "^10.1.0",
+    "copy-webpack-plugin": "^9.0.0",
+    "eslint": "^7.29.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "eslint-plugin-vue": "^7.11.1",
+    "eslint-webpack-plugin": "^2.5.4",
+    "vue": "^2.6.12",
+    "vue-router": "^3.5.1",
+    "vuex": "^3.6.2",
+    "workbox-webpack-plugin": "^5.0.0"
   },
   "browserslist": [
     "last 10 Chrome versions",
