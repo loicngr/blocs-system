@@ -2,6 +2,8 @@
 
 Z Overlay
 
+## [Demo here](https://z-overlay.pages.dev)
+
 ## Install the dependencies
 ```bash
 yarn
